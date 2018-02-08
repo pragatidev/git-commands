@@ -414,6 +414,13 @@ To add an alias simply open your .gitconfig file on your home directory and incl
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 ```
 
+### Fork forced Sync
+git remote add upstream https://github.com/some_user/some_repo
+git fetch upstream
+git checkout master
+git reset --hard upstream/master  
+git push origin master --force
+
 ### Contributing
 
 1. Fork it!
